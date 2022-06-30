@@ -1,8 +1,11 @@
 import numpy as np
 import torch
 
-torch_fft = torch.fft
-torch_ifft = torch.ifft 
+# torch_fft = torch.fft
+# torch_ifft = torch.ifft
+
+torch_fft = torch.fft.fft
+torch_ifft = torch.fft.ifft
 
 # ---------------------------------------------------------------------------- #
 #                                   CSMRI                                      #
