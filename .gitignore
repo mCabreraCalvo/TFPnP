@@ -3,11 +3,9 @@ __pycache__
 model
 tasks/pr/data
 tasks/spi/data
-tasks/ct/data
 train_log
 tfpnp_old
 .idea
-checkpoints
 results
 tfpnp/pnp/denoiser/pretrained
 log
