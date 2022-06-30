@@ -25,7 +25,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 def main(opt):
     data_dir = Path('data')
     log_dir = Path('log') / opt.exp
-    mask_dir = data_dir / 'csmri' / 'data' / 'masks'
+    mask_dir = data_dir / 'masks'
 
     sampling_masks = ['radial_128_2', 'radial_128_4', 'radial_128_8']
     
@@ -41,7 +41,7 @@ def main(opt):
     writer = SummaryWriter(log_dir)
     
     sigma_n_eval = 15
-    val_roots = [data_dir / 'csmri' / 'Medical7_2020' / sampling_mask / str(sigma_n_eval) for sampling_mask in sampling_masks]
+    val_roots = [data_dir  / 'Medical7_2020' / sampling_mask / str(sigma_n_eval) for sampling_mask in sampling_masks]
     val_datasets = [CSMRIEvalDataset(val_root, fns=None) for val_root in val_roots]
     
     val_loaders = [torch.utils.data.DataLoader(val_dataset, batch_size=1, shuffle=False,
