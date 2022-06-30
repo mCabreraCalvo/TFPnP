@@ -1,7 +1,6 @@
 __pycache__
 .vscode
 model
-tasks/csmri/data
 tasks/pr/data
 tasks/spi/data
 tasks/ct/data
